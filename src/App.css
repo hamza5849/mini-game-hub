@@ -1,0 +1,75 @@
+/* Header & Footer */
+.header,
+.footer {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Light mode colors */
+.light-mode .header,
+.light-mode .footer {
+  background-color: #BDE3C3; /* light greenish */
+  color: #fff !important; /* white text */
+}
+
+/* Dark mode colors */
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: #4F200D; /* dark reddish-brown */
+  color: #808080 !important; /* grey text */
+}
+
+/* Game cards in dark/light mode */
+.light-mode-card {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #000;
+}
+.dark-mode-card {
+  background-color: rgba(50, 50, 50, 0.85);
+  color: #fff;
+}
+
+/* Game Selector Cards */
+.game-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Hero Banner Box */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 400px; /* adjustable */
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin: 0;
+  position: relative;
+}
+
+/* Optional: Dark overlay on hero box for readability */
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+.hero-text-box {
+  position: relative;
+  z-index: 1;
+  color: white;
+}

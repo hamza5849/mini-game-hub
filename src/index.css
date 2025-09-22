@@ -1,0 +1,60 @@
+/* ---------- Global Theme Variables ---------- */
+:root {
+  --light-header-footer: silver;
+  --dark-header-footer: black;
+}
+
+/* Header & Footer */
+.header,
+.footer {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.light-mode .header,
+.light-mode .footer {
+  background-color: var(--light-header-footer);
+  color: #000;
+}
+
+.dark-mode .header,
+.dark-mode .footer {
+  background-color: var(--dark-header-footer);
+  color: #fff;
+}
+
+/* ---------- Game Selector Cards ---------- */
+.game-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Hero Banner ---------- */
+.hero-banner {
+  background-image: url("/assets/fabio-magalhaes-nmTm7knUnqs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 600px; /* bigger height */
+  display: flex;
+  align-items: center; /* vertically center text */
+  width: 100%;
+  margin: 0; /* remove any spacing from navbar */
+}
+
+/* ---------- Hero Text Box ---------- */
+.hero-text-box {
+  max-width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent overlay */
+  padding: 80px 50px; /* larger padding for emphasis */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
