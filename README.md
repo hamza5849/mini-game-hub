@@ -1,12 +1,37 @@
-# React + Vite
+# 🎮 Mini Game Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based mini game hub built with **Vite**. Play multiple games like Tic Tac Toe, Snake, Sudoku, Rock-Paper-Scissors, Typing Speed Test, and more — all in a single web app!  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Features
 
-## Expanding the ESLint configuration
+- Theme support: Light / Dark mode toggle  
+- Multiple games in one app:
+  - Tic Tac Toe (with AI difficulty levels)
+  - Snake Game
+  - Memory Game
+  - Rock Paper Scissors
+  - Sudoku 4x4
+  - Guess the Number
+  - Typing Speed Test  
+- Responsive design  
+- Animated buttons & interactions using `framer-motion`  
+- Score tracking for games  
+- Easy navigation between games  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚡ Tech Stack
+
+- React 18  
+- Vite (fast development + HMR)  
+- Bootstrap 5 for UI  
+- Framer Motion for animations  
+- React Icons for game buttons  
+- Vanilla CSS for custom styles  
+
+---
+
+## 📂 Project Structure
+
