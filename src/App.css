@@ -1,0 +1,210 @@
+/* Reset & base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: all 0.3s ease;
+  background-image: url("/darkmode.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Theme wrappers */
+.light-mode {
+  --header-bg: #BDE3C3;
+  --header-text: #0b2f18;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-text: #000;
+  --accent: #198754;
+  color: var(--card-text);
+  background-image: url("/lightmode.jpg");
+}
+
+.dark-mode {
+  --header-bg: #4F200D;
+  --header-text: #f8f9fa;
+  --card-bg: rgba(30,30,30,0.88);
+  --card-text: #fff;
+  --accent: #ffc107;
+  color: var(--card-text);
+  background-image: url("/darkmode.jpg");
+}
+
+/* Header & Footer */
+.header, .footer {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Cards */
+.light-mode-card, .dark-mode-card {
+  background-color: var(--card-bg) !important;
+  color: var(--card-text) !important;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 35vh;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  padding-left: 4%;
+  position: relative;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.25);
+  z-index: 0;
+}
+.hero-text-box {
+  position: relative;
+  z-index: 1;
+  color: white;
+  max-width: 700px;
+}
+
+/* Game Selector Grid */
+.game-selector {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.game-card {
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  border-radius: 12px;
+  text-align: center;
+  padding: 12px;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+}
+.game-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+/* Memory Game */
+.memory-card {
+  width: 12vw;
+  max-width: 80px;
+  height: 12vw;
+  max-height: 80px;
+  font-size: 1.6rem;
+  border-radius: 8px;
+}
+
+/* TicTacToe */
+.tic-cell {
+  width: 20vw;
+  max-width: 100px;
+  height: 20vw;
+  max-height: 100px;
+  font-size: calc(1.5rem + 0.5vw);
+  padding: 0;
+}
+
+/* Snake Game */
+.snake-board div {
+  box-sizing: border-box;
+}
+
+/* Progress bars */
+.progress {
+  height: 14px;
+}
+
+/* Typing test */
+.typing-text {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+/* Sudoku */
+.sudoku-grid {
+  display: inline-block;
+}
+.sudoku-row {
+  display: flex;
+}
+.sudoku-cell {
+  width: calc(22vw / 4);
+  max-width: 56px;
+  height: calc(22vw / 4);
+  max-height: 56px;
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 2px;
+  border-radius: 6px;
+}
+.sudoku-cell.prefilled {
+  background: rgba(0,0,0,0.06);
+  font-weight: 600;
+}
+
+/* Visual helpers */
+.text-success-strong {
+  color: #198754;
+  font-weight: 600;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+  .hero-banner {
+    height: 25vh;
+    padding-left: 4%;
+  }
+  .hero-text-box h1 {
+    font-size: 1.6rem;
+  }
+  .memory-card {
+    width: 18vw;
+    height: 18vw;
+    font-size: 1.3rem;
+  }
+  .tic-cell {
+    width: 24vw;
+    height: 24vw;
+    font-size: 1.5rem;
+  }
+  .sudoku-cell {
+    width: 20vw / 4;
+    height: 20vw / 4;
+  }
+  .game-selector {
+    gap: 12px;
+    padding: 12px;
+  }
+}
+
+/* Centering Game Wrapper */
+.game-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Footer stick to bottom */
+.footer {
+  position: sticky;
+  bottom: 0;
+}
